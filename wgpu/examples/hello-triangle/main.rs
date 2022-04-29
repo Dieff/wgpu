@@ -110,7 +110,12 @@ async fn run(event_loop: EventLoop<()>, window: Window) {
                             view: &view,
                             resolve_target: None,
                             ops: wgpu::Operations {
-                                load: wgpu::LoadOp::Clear(wgpu::Color::GREEN),
+                                load: wgpu::LoadOp::Clear(wgpu::Color{
+                                  r: 0.0,
+                                  g: 0.0,
+                                  b: 0.1,
+                                  a: 0.0
+                                }),
                                 store: true,
                             },
                         }],
